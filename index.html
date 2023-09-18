@@ -64,8 +64,19 @@ function game() {
     for (let i = 1; i <= 5; i++) {
 
         playRound(playerSelection);
-    }
+
+        if (playerScore > computerScore) {
+    return console.log("You are the overall winner!")
+}
+
+else if (computerScore > playerScore)
+    return console.log("Computer is the overall winner!")
+
+else if (playerSelection == computerSelection)
+ console.log("It's a tie!");
   }
+    }
+  
   
   
 
