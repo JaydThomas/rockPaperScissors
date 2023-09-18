@@ -25,7 +25,38 @@ function PlayRound() {
     
     const playerSelection = prompt("Please insert either Rock, Paper or Scissors");
     const computerSelection = getComputerChoice();
+    
+    if (playerSelection == rockPaperScissors[0] && computerSelection == rockPaperScissors[1]){
+         console.log("You lose! Paper beats Rock")
+         computerScore++;} //Player = Rock & Computer = Paper
 
+    else if (playerSelection == rockPaperScissors[1] && computerSelection == rockPaperScissors[2]){
+         console.log("You lose! Scissors beats Paper")
+         computerScore++;} //Player = Paper & Computer = Scissors
+        
+      
+    else if (playerSelection == rockPaperScissors[2] || computerSelection == rockPaperScissors[0]){
+         console.log("You lose! Rock beats Scissors")
+         computerScore++;} //Player = Scissors & Computer = Rock
+
+    else if (playerSelection == rockPaperScissors[1] && computerSelection == rockPaperScissors[0]){
+
+         console.log("You win! Paper beats Rock")
+         playerScore++;} //Player = Paper & Computer = Rock
+
+    else if (playerSelection == rockPaperScissors[2] && computerSelection == rockPaperScissors[1]){
+        
+        console.log("You win! Scissors beats Paper")
+        playerScore++;} //Player = Scissors & Computer = Paper
+      
+
+    else if (playerSelection == rockPaperScissors[0] && computerSelection == rockPaperScissors[2]){
+        console.log("You win! Rock beats Scissors")
+        playerScore++;} //Player = Rock & Computer = Scissors
+
+    else if(computerSelection == playerSelection)
+
+        console.log("It's a tie!")
 }
 
 </script>
