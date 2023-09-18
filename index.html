@@ -21,7 +21,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 
-function PlayRound() {
+function playRound() {
     
     const playerSelection = prompt("Please insert either Rock, Paper or Scissors");
     const computerSelection = getComputerChoice();
@@ -62,8 +62,8 @@ function PlayRound() {
 function game() {
     
     for (let i = 1; i <= 5; i++) {
-        
-        PlayRound(playerSelection);
+
+        playRound(playerSelection);
     }
   }
   
