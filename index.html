@@ -17,8 +17,9 @@ function getComputerChoice () {
 }
 
 function getPlayerChoice() {
-    let playerSelection;
-     do{playerSelection = prompt('Please insert either Rock, Paper or Scissors').toUpperCase()
+     let playerSelection;
+     do{
+        playerSelection = prompt('Please insert either Rock, Paper or Scissors').toUpperCase()
 }
      while(!rockPaperScissors.includes(playerSelection))
      return playerSelection;
@@ -75,17 +76,19 @@ function game() {
         playRound(playerSelection, computerSelection);
 
   }
-    }
-
-     if (playerScore > computerScore) {
+  
+  if (playerScore > computerScore) {
         console.log("You are the overall winner!")
 }
 
        else if (computerScore > playerScore) {
         console.log("Computer is the overall winner!")}
 
-       else if (playerSelection == computerSelection){
-        console.log("It's a tie!");}
+       else if (playerSelection == computerSelection)
+        console.log("It's a tie!");
+    }
+
+    
 
 </script>
 </html>
