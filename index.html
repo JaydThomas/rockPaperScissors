@@ -20,7 +20,8 @@ function getPlayerChoice() {
 
      do{playerSelection = prompt('Please insert either Rock, Paper or Scissors').toUpperCase()
 }
-     while(rockPaperScissors.includes(playerSelection))
+     while(!rockPaperScissors.includes(playerSelection))
+     return playerSelection;
 }
 
 
