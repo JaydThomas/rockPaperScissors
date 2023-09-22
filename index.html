@@ -10,18 +10,18 @@
     
 </body>
 <script>
-const rockPaperScissors = ["ROCK", "PAPER", "SCISSORS"];
+const rockPaperScissors = ["ROCK", "PAPER", "SCISSORS"]; //initialize the array
 
 function getComputerChoice () {
      return rockPaperScissors[Math.floor(Math.random() * rockPaperScissors.length)]
-}
+} // function used to generate a random value from the array. Math.random method generates a random index from the array based on it's length of 3. Math.floor is used to round the decimal to it's nearest whole number 
 
 function getPlayerChoice() {
-     let playerSelection;
+     let playerSelection; // initialize variable (do not use const). It is local so would need to be redefined elsewhere for reuse
      do{
-        playerSelection = prompt('Please insert either Rock, Paper or Scissors').toUpperCase()
+        playerSelection = prompt('Please insert either Rock, Paper or Scissors').toUpperCase() //calling variable and using prompt to prompt for an input. This will be converted to upper case to match array values. Therefore the casing of the user's input is not sensitive
 }
-     while(!rockPaperScissors.includes(playerSelection))
+     while(!rockPaperScissors.includes(playerSelection)) // if the users input is not in the array, this statement is truthy and the do loop will be called. If it is false,the function will exit
      return playerSelection;
 }
 
@@ -31,7 +31,7 @@ let computerScore = 0;
 let tieCounter = 0;
 
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) { //defining variables as parameters so that they can be called in the main game function
 
     
      if (playerSelection == rockPaperScissors[0] && computerSelection == rockPaperScissors[1]){
@@ -73,7 +73,7 @@ function game() {
 
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection); //must call function with it's parameters
 
   }
   
