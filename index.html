@@ -19,6 +19,7 @@ function getComputerChoice () {
 
 let playerScore = 0;
 let computerScore = 0;
+let tieCounter = 0;
 
 
 function playRound() {
@@ -54,8 +55,9 @@ function playRound() {
         console.log("You win! Rock beats Scissors")
         playerScore++;} //Player = Rock & Computer = Scissors
 
-    else if(computerSelection == playerSelection)
+    else if(computerSelection == playerSelection) {
         console.log("It's a tie!")
+        tieCounter++;}
 }
 
 function game() {
